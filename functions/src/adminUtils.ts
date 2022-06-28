@@ -20,6 +20,7 @@ const updateReviewQueue = async (userId: string) => {
       .doc('Sundance')
       .update({ users: reviewQueue });
   } catch (e) {
+    functions.logger.info('Im still alive');
     functions.logger.error(e);
     throw e;
   }
